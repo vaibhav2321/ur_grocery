@@ -1,6 +1,6 @@
 
 :root{
-    --col1:#7ED957;
+    --col1:#3d901a;
     --col2:gray;
     --col3:#cecece;
 }
@@ -10,7 +10,7 @@
     padding:0;
     font-family:
     "Poppins", sans-serif;
-    font-weigth:400;
+    /* font-:400; */
 }
 
 #dropdown-basic {
