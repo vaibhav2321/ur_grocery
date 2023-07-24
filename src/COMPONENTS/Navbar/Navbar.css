@@ -1,0 +1,122 @@
+nav{
+    background-color: blue;
+    background-color: rgb(26, 27, 34);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0  0 10px 0 rgba(0,0,0,1) ;
+}
+
+nav svg{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+nav svg:hover{
+    color: var(--col1);
+}
+nav .s1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Image */
+nav img{
+    width: 100px;
+}
+
+nav .searchbar{
+    display: flex;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0,0, 0,1);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 1px;
+    justify-content: space-between;
+}
+
+nav .searchbar input{
+    width: 250px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    /* width: 100%; */
+}
+
+/* Search icon */
+nav .searchbar svg:hover{
+    color:whitesmoke ;
+}
+
+/* Search icon */
+nav .searchbar button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--col1);
+}
+
+/* Search icon */
+nav .searchbar button:hover{
+    background-color: var(--col1);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* navbar section 1, cart and account icon*/
+nav .s1 .right{
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;gap:10px;
+    align-items:center;
+}
+
+/* cart  */
+nav cart{
+    position: relative;
+    margin: 0px 20px;
+}
+
+/* cart Notification */
+nav .cart .qty{
+    background-color: var(--col1);
+    color:whitesmoke;
+    border-radius: 50%;
+    /* padding: 3px; */
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 42px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Navbar Scction 2 */
+nav .s2{
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 3%;
+}
+
+/* Navbar section 2 hover */
+nav .s2:hover{
+    text-decoration: none;
+    color:var(--col1);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav .s2 a:hover{
+    color: var(--col1);
+}
+
