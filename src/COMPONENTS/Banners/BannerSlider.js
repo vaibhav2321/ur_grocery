@@ -4,7 +4,7 @@ import './BannerSlider.css';
 
 const BannerSlider = () => {
 
-  const data = [
+  const bannerData = [
       {
         id: 1,
         image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JvY2VyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
@@ -35,15 +35,13 @@ const BannerSlider = () => {
     <div className='bannerSlider'>
       <Slider className='bannerSlider' {...settings}>
         {
-          data.map(item => {
+          bannerData.map(item => {
               return(
                 <div className="imagecount" key={item.id}>
-                   <div className='image'>
-                   <img src={item.image} alt="noimg" />
-                   </div>
+                    <img src={item.image} alt="bannerImage" />
                     <div className='content'>
                       <h1>{item.title}</h1>
-                      <p>{item.description}</p>
+                      <span>{item.description}</span>
                       <button>Shop More</button>
                     </div>
                 </div>
