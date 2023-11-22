@@ -11,11 +11,11 @@ const AllProduct = () => {
     const products = [
         {
             id: 1,
-            productimage: vegitables,
+            productimage: fruits,
             productname: "Product 1",
-            productprice: 100,
-            counttype:"1 each",
-            discountpercent:12
+            productprice: 120,
+            counttype:"2 each",
+            discountpercent:20
         },
         {
             id: 2,
