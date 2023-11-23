@@ -94,10 +94,162 @@
     border: none;
     background-color: var(--col1);
     color: whitesmoke;
-    font-size: 1.5rem;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
 }
 .productpage .btncont button:hover{
     background-color: black;
+}
+
+/*  */
+.productpage .pc2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+}
+
+.productpage .pc2 tabs{
+    display: flex;
+    margin: 20px 0px;
+    gap: 20px;
+    align-items: center;
+    justify-self: center;
+}
+
+.productpage .pc2 .tabs .active{
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--col1);
+    cursor: pointer;
+    border-bottom: 2px solid var(--col1) ;
+    margin: 0px 10px;
+    background-color: whitesmoke;
+}
+.productpage .pc2 .tabs .inactive{
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: gray;
+    cursor: pointer;
+    margin: 0px 10px;
+    background-color: whitesmoke;
+}
+
+.productpage .reviewcont{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.productpage form{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+    width: 70%;
+    max-width: 700px;
+}
+
+.productpage form .fromgroup{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.productpage .reviewcont form div label{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--col1);
+}
+
+.productpage .reviewcont form div input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--col1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.productpage .reviewcont form div textarea{
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid var(--col1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.productpage .reviewcont button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--col1);
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+.productpage .allreview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 700px;
+    margin-top: 50px;
+}
+
+.productpage .allreview .head1{
+    color: var(--col1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--col1);
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.productpage .allreview .review{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.productpage .reviewhead{
+    display: flex;;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.productpage .reviewhead p{
+    color: var(--col1);
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.productpage .reviewbody{
+    font-size: 14px;
+}
+
+.productpage .desc{
+    margin-top: 20px;
+    width: 70%;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
 }

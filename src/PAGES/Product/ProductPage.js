@@ -6,6 +6,8 @@ import img3 from '../../ASSETS/3.png';
 import img4 from '../../ASSETS/4.png';
 import Navbar from '../../COMPONENTS/Navbar/Navbar.js'
 import './ProductPage.css'
+import Footer1 from '../../COMPONENTS/Footer/Footer1.js';
+import Footer2 from '../../COMPONENTS/Footer/Footer2.js';
 
 const ProductPage = () => {
   const { prodid } = useParams();
@@ -13,7 +15,7 @@ const ProductPage = () => {
   const [productdata, setproductdata] = React.useState([])
   const [activeimg, setactiveimg] = React.useState({})
   const [count, setcount] = React.useState(1)
-
+  const [showreview, setshowreview] = React.useState(false);
 
   const getproductdatabyid = async () => {
     // Simulated API response
@@ -69,25 +71,25 @@ const ProductPage = () => {
                   {
                       "ReviewId": 1,
                       "Name": "Harshal Jain",
-                      "Email": "",
-                      "Rating": 5,
+                      "Email": "xyz123@gmail.com",
+                      "Rating": 4,
                       "Date": "2021-08-01",
-                      "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                      "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                   },
                   {
                       "ReviewId": 2,
                       "Name": "Viraj",
-                      "Email": "",
-                      "Rating": 1,
-                      "Date": "2021-08-01",
-                      "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                      "Email": "xyz123@gmail.com",
+                      "Rating": 3,
+                      "Date": "2021-03-25",
+                      "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                   },
                   {
                       "ReviewId": 3,
-                      "Name": "Harshal Jain",
-                      "Email": "",
-                      "Rating": 4,
-                      "Date": "2021-08-01",
+                      "Name": "Rajat Verma",
+                      "Email": "xyz123@gmail.com",
+                      "Rating": 5,
+                      "Date": "2021-08-07",
                       "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                   }
               ],
@@ -179,6 +181,74 @@ Go Back
           </div>
         </div>
       </div>
+      <div className="pc2">
+        {
+          showreview ? 
+          <div className='tabs'>
+            <button className='inactive'
+            onClick={()=>{
+              setshowreview(false)
+            }}
+            >Discription</button>
+            <button className='active'
+            onClick={()=>{
+              setshowreview(true)
+            }}>Reviews</button>
+          </div>
+          :
+          <div className='tabs'>
+            <button className='active' 
+            onClick={()=>{
+              setshowreview(false)
+            }}>Discription</button>
+            <button className='inactive'
+            onClick={()=>{
+              setshowreview(true)
+            }}>Reviews</button>
+          </div>
+        }
+        {
+          showreview ?
+          <div className='reviewcont'>
+            <form >
+              <div className="fromgroup">
+                <label htmlFor="">Name</label>
+                <input type="text"/>
+              </div>
+              <div className="fromgroup">
+                <label htmlFor="">Email</label>
+                <input type="text"/>
+              </div>
+              <div className="fromgroup">
+                <label htmlFor="">Review</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </div>
+              <button>Submit</button>
+            </form>
+            <div className='allreview'>
+              <h1 className='head1'>Product Reviews</h1>
+              {productdata.ProductReviews && productdata.ProductReviews.map((item, index)=>{
+                return(
+                  <div className='review'>
+                    <div className='reviewhead'>
+                      <p className='name'>{item.Name}</p>
+                      <span className='date'>{item.Data}</span>
+                    </div>
+                    <div className='reviewbody'>
+                      {item.Review}
+                    </div>
+                  </div>
+                )
+              })
+              }
+            </div>
+          </div>
+          :
+          <p className='desc'>{productdata.ProductDescription}</p>
+        }
+      </div>
+      <Footer1/>
+      <Footer2/>
     </div>
   )
   }
