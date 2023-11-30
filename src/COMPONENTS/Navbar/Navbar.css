@@ -91,7 +91,7 @@ nav .cart .qty{
     height: 25px;
     width: 25px;
     top: 25px;
-    right: 30px;
+    right: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,15 +111,22 @@ nav .s2{
 }
 
 /* Navbar section 2 hover */
-nav .s2:hover{
+nav .s2 a:hover{
     text-decoration: none;
     color:var(--col1);
-    font-size: 14px;
-    font-weight: 500;
+    /* font-size: 14px; */
+    font-weight: 700;
     cursor: pointer;
 }
-
+#abt{
+    color: whitesmoke;
+}
+#abt:hover{
+    color: var(--col1);
+}
 nav .s2 a:hover{
+    
+    text-decoration: none;
     color: var(--col1);
 }
 
@@ -127,3 +134,14 @@ nav .s2 a:hover{
     background-color: var(--col1);
     /* color: var(--col1); */
 }
+nav .s2 a{
+    /* color: whitesmoke; */
+    text-decoration: none;
+}
+#dropdown-pro{
+    color: whitesmoke;
+}
+#dropdown-pro:hover{
+    color: var(--col1);
+}
+

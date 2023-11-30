@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import { useState} from "react";
+import {Link} from "react-router-dom"
 import './Navbar.css'
 import logo from '../../ASSETS/logo.png'
 import Dropdown from "react-bootstrap/Dropdown";
@@ -30,11 +31,21 @@ const Navbar =()=> {
 </svg>
 
                     </div>
-
+                    <Dropdown>
+                      <Dropdown.Toggle variant="" id="dropdown-pro">
+                        
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
 </svg>
 
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item href="/login">Login</Dropdown.Item>
+                        <Dropdown.Item href="/signup">SignUp</Dropdown.Item>
+                        <Dropdown.Item href="#">Profile</Dropdown.Item>
+                        <Dropdown.Item href="#">LogOut</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
                 </div>
             </div>
             <div className='s2'>
@@ -49,8 +60,12 @@ const Navbar =()=> {
         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
       </Dropdown.Menu>
             </Dropdown>
-            <a>About Us</a>
-            <a>Contact Us</a>
+            <Link to="/About">
+            <a id="abt">About Us</a>
+            </Link>
+            <Link  to="/Contact">
+            <a id="abt">Contact Us</a>
+            </Link>
             <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic">
         more

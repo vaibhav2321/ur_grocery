@@ -1,0 +1,120 @@
+.authpage{
+    width: 100%;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.authcont{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    height: 79vh;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.737);
+    overflow:visible;
+    margin: 0 auto;
+    margin-top: 10px;
+    /* margin: 10px 5px; */
+    background-color: rgba(0, 0, 0, 0.744);
+    border-radius: 4%;
+    border-top-right-radius: 4%;
+}
+.authcont img{
+    height: 100%;
+    width:  70%;
+    object-fit: cover;
+    border-top-left-radius: 4%;
+    border-bottom-left-radius: 4%;
+}
+
+.authform{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    gap: 5px;overflow: hidden;
+}
+
+.authcont .formgroup{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.authform h1 {
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    background: linear-gradient(to right, #00ff62, #84ff00, #84ff00);
+    -webkit-background-clip: text; 
+    color:transparent;
+}
+
+.authform label{
+    font-size:17px ;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.authform input{
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.599);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.authform button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+    background: linear-gradient(to right, #45ff00, #51ff00, #59ff00);
+    -webkit-background-origin:content-box;
+    color: black;
+    cursor: pointer;
+}
+
+.authform button:hover{
+    background: whitesmoke;
+}
+
+.authform p{
+    font-size: 20px;
+    font-weight: 500;
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+}
+
+.authform p:hover{
+    color: #59ff00;
+    cursor: pointer;
+}
+
+.authform .or{
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+.form-group-row{
+    display: flex;
+    gap: 5px;
+}
+#firstname{
+    width: 100%;
+}
+#lastname{
+    width: 100%;
+}
