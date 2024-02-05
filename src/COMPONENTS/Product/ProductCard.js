@@ -16,16 +16,16 @@ const ProductCard = ({data}) => {
         </div>
         <div className='s2'>
             <h3>
-                ${
+            ₹{
                     data.productprice - (data.productprice * data.discountpercent /100 )
                 }
-                <span>${data.productprice}</span></h3>
+                <span>₹{data.productprice}</span></h3>
                 <p>
                   {data.productname}
                 </p>
         </div>
         <div className='s3'>
-            <p>{data.counttype}</p>
+            <p>{data.counttype}kg</p>
         </div>
         {
           show ? 
