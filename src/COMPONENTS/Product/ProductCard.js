@@ -16,6 +16,7 @@ const ProductCard = ({data}) => {
         </div>
         <div className='s2'>
             <h3>
+              
             ₹{
                     data.productprice - (data.productprice * data.discountpercent /100 )
                 }
